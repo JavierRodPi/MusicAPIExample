@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Rock Trakcs";
+}
+
+@model  IEnumerable<MusicAPIExample.Track.Track>
+<table class="table">
+    <tr>
+        <th>Track Title</th>
+        <th>Composer</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComposerName)
+        </td>
+    </tr>
+    }
+</table>
